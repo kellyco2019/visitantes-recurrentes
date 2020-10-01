@@ -61,21 +61,19 @@ app.get("/", async (req, res) => {
         }
         
         let template = '<table><thead><tr><th>ID</th><th>Name</th><th>Visits</th></tr></thead>';
-
-
+        
         visitors.forEach((visitors) => {
-            template += `<table><tr>
+            template += `<tr>
                 <td>${visitors.id}</td>
                 <td>${visitors.name}</td>
                 <td>${visitors.count}</td>
-            </tr><table>`;
+            </tr></thead>`;
         });
             template += "</table>"; 
 
              res.send(template);     
     });
 });
-
 app.listen(3000, () => {
     console.log("server listening on port 3000")
 });
