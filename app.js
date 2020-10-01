@@ -64,11 +64,11 @@ app.get("/", async (req, res) => {
 
 
         visitors.forEach((visitors) => {
-            template += `<table><tr>
+            template += `<table><thead><tr>
                 <td>${visitors.id}</td>
                 <td>${visitors.name}</td>
                 <td>${visitors.count}</td>
-            </tr><table>`;
+            </tr></thead><table>`;
         });
             template += "</table>"; 
 
