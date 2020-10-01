@@ -60,15 +60,15 @@ app.get("/", async (req, res) => {
             return console.error(err);
         }
         
-        let template = '<table><th>ID</th><th>Name</th><th>Visits</th>';
+        let template = '<table><thead><tr><th>ID</th><th>Name</th><th>Visits</th></tr></thead>';
 
 
         visitors.forEach((visitors) => {
-            template += `<table><thead><tr>
+            template += `<table><tr>
                 <td>${visitors.id}</td>
                 <td>${visitors.name}</td>
                 <td>${visitors.count}</td>
-            </tr></thead><table>`;
+            </tr><table>`;
         });
             template += "</table>"; 
 
